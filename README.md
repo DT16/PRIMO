@@ -8,6 +8,10 @@ PRIMO focuses on two key components of sustainability: the environment, i.e., to
 
 PRIMO combines research methods from computer science to collect and analyze technical data related to privacy and social science to understand the perception of users with respect to the protection of their personal data.
 
+# Citation
+
+C. Kouma, F, Salmani, D. Tuncer, "Mapping Virtual Mobility: a Data-driven Approach", Technical Report, Ecole nationale des Ponts et Chaussees, Institut Polytechnique de Paris, France, May 2025.
+
 # Acknowledgment
 
 This work is funded by the French National Research Agency as part of the Mob Sci-Dat Factory project (ANR-23-PEMO-0004) under the France 2030 program.
