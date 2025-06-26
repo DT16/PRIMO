@@ -8,6 +8,6 @@ PRIMO focuses on two key components of sustainability: the environment, i.e., to
 
 PRIMO combines research methods from computer science to collect and analyze technical data related to privacy and social science to understand the perception of users with respect to the protection of their personal data.
 
-#Acknowledgment
+# Acknowledgment
 
 This work is funded by the French National Research Agency as part of the Mob Sci-Dat Factory project (ANR-23-PEMO-0004) under the France 2030 program.
