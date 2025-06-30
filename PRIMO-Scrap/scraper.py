@@ -94,7 +94,7 @@ def search_google_play(query):
         "gl": "fr",
         "store": "apps",
         "q": query,
-        "api_key": "8f487639041390cb31289df387fe96cc0ef12a70d0ddafe822e087562a97a6ca"
+        "api_key": 
     }
 
     search = GoogleSearch(params)
