@@ -1,48 +1,47 @@
 # Google Play Store Scraping Automation
 
-Ce programme permet d'automatiser des requêtes de recherche sur le Google Play Store via les outils **SerpApi** et **google_play_scraper**. L'entrée du programme consiste en un arbre qui décrit l'ensemble des requêtes que vous souhaitez effectuer. En sortie, un dossier est créé contenant des fichiers au format JSON avec les détails des recherches effectuées et les applications scrappées.
+This project automates search queries on the Google Play Store using **SerpApi** and **google_play_scraper**. The input is a tree structure describing all the queries to be performed. The output is a folder containing JSON files with the details of the executed searches and scraped applications.
 
-### Prérequis
+### Prerequisites
 
-Le scrappage est effectué à l'aide de **SerpApi**, qui permet de récupérer des données des applications du Google Play Store, et de la bibliothèque **google_play_scraper** pour obtenir des détails supplémentaires sur les applications.
+Scraping is performed using **SerpApi**, which allows retrieval of application data from the Google Play Store, and the **google_play_scraper** library to obtain additional app details.
 
-#### Utilisation de SerpApi
+#### Using SerpApi
+1. Create an account at [SerpApi](https://serpapi.com/).
+2. Retrieve your personal API key.
+3. Replace this API key in the **`.env`** file or directly inside your code functions (see **search_google_play(query)**) to authenticate your requests.
 
-1. Créez un compte sur [SerpApi](https://serpapi.com/).
-2. Récupérez votre clé API personnelle.
-3. Remplacez cette clé API dans le fichier **`.env`** ou directement dans les fonctions dans votre code (voir **search_google_play(query)**) pour authentifier vos requêtes.
+#### Install Required Libraries
 
-#### Installation des bibliothèques nécessaires
-
-Pour installer les dépendances nécessaires, utilisez les commandes suivantes :
+Use the following commands to install the required dependencies:
 
 ```bash
 pip install serpapi
 pip install google-play-scraper
 ``` 
 
-### Fonctions utiles
+### Main Functions
 
 #### `info_app(idapp)`
-Cette fonction permet d’obtenir les informations détaillées d'une application à partir de son identifiant unique (`idapp`) sur le Google Play Store.
+Retrieves detailed information about an application using its unique Google Play Store identifier (`idapp`).
 
 #### `search_google_play(query)`
-Cette fonction effectue une recherche sur le Google Play Store à partir du mot-clé `query` et renvoie les résultats associés.
+Performs a search on the Google Play Store based on the keyword `query` and returns the associated results.
 
-### Fonction finale
+### Final function
 
 #### `arbo_taxonomie`
-La fonction **`arbo_taxonomie`** est la fonction principale qui permet de parcourir l'arbre des requêtes et de récupérer les résultats des recherches. Elle prend un nœud de l'arbre comme entrée et effectue les requêtes pour chaque nœud et ses synonymes.
+The **`arbo_taxonomie`** function is the core of the program. It traverses the query tree and performs the necessary searches. It takes a node from the tree as input and executes searches for each node and its synonyms.
 
-Voici les principales étapes de son fonctionnement :
+Main steps:
 
-1. **Création de répertoires** : La fonction crée un répertoire pour chaque nœud de l'arbre où les résultats seront stockés.
-2. **Recherche des applications** : Pour chaque nœud et ses synonymes, des recherches sont effectuées sur le Google Play Store via **SerpApi**.
-3. **Récupération des résultats** : Les identifiants des applications sont collectés et leurs informations détaillées sont récupérées via **google_play_scraper**.
-4. **Sauvegarde des résultats** : Les données sont sauvegardées dans des fichiers JSON pour chaque recherche effectuée.
+1. **Folder Creation**: Creates a directory for each node of the tree where the results will be stored.
+2. **App Search**: Performs searches on the Google Play Store via **SerpApi** for each node and its synonyms.
+3. **Result Collection**: Collects application IDs and fetches their detailed information using google_play_scraper.
+4. **Data Saving**: Saves the search results in JSON files.
 
-### Exécution du programme
-Pour exécuter le programme, il suffit de lancer le fichier bigtree_scraper.py
+### Running the Program
+To run the program, simply execute the bigtree_scraper.py file.
 
 
 
