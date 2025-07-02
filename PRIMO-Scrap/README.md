@@ -2,6 +2,9 @@
 
 PRIMO-Scrap enables the automation of search queries on the Google Play Store platform using **SerpApi** and **google_play_scraper**. The input is a tree structure describing all the queries to be performed. The output is a folder containing JSON files with the details of the executed searches and scraped applications.
 
+
+## Dataset extraction
+
 ### Prerequisites
 
 Scraping is performed using **SerpApi**, which enables the retrieval of application data from the Google Play Store platform, and the **google_play_scraper** library to obtain additional app details.
