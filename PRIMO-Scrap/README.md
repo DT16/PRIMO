@@ -1,15 +1,15 @@
 # Google Play Store Scraping Automation
 
-This project automates search queries on the Google Play Store using **SerpApi** and **google_play_scraper**. The input is a tree structure describing all the queries to be performed. The output is a folder containing JSON files with the details of the executed searches and scraped applications.
+PRIMO-Scrap enables the automation of search queries on the Google Play Store platform using **SerpApi** and **google_play_scraper**. The input is a tree structure describing all the queries to be performed. The output is a folder containing JSON files with the details of the executed searches and scraped applications.
 
 ### Prerequisites
 
-Scraping is performed using **SerpApi**, which allows retrieval of application data from the Google Play Store, and the **google_play_scraper** library to obtain additional app details.
+Scraping is performed using **SerpApi**, which enables the retrieval of application data from the Google Play Store platform, and the **google_play_scraper** library to obtain additional app details.
 
 #### Using SerpApi
 1. Create an account at [SerpApi](https://serpapi.com/).
 2. Retrieve your personal API key.
-3. Replace this API key in the **`.env`** file or directly inside your code functions (see **search_google_play(query)**) to authenticate your requests.
+3. Replace the API key in the **`.env`** file or directly inside your code functions (see **search_google_play(query)**) to authenticate your requests.
 
 #### Install Required Libraries
 
@@ -26,7 +26,7 @@ pip install google-play-scraper
 Retrieves detailed information about an application using its unique Google Play Store identifier (`idapp`).
 
 #### `search_google_play(query)`
-Performs a search on the Google Play Store based on the keyword `query` and returns the associated results.
+Performs a search on Google Play Store based on the keyword `query` and returns the associated results.
 
 ### Final function
 
@@ -36,7 +36,7 @@ The **`arbo_taxonomie`** function is the core of the program. It traverses the q
 Main steps:
 
 1. **Folder Creation**: Creates a directory for each node of the tree where the results will be stored.
-2. **App Search**: Performs searches on the Google Play Store via **SerpApi** for each node and its synonyms.
+2. **App Search**: Performs searches on Google Play Store via **SerpApi** for each node and its synonyms.
 3. **Result Collection**: Collects application IDs and fetches their detailed information using google_play_scraper.
 4. **Data Saving**: Saves the search results in JSON files.
 
@@ -45,7 +45,7 @@ To run the program, simply execute the bigtree_scraper.py file.
 
 
 
-## Google Play Store Scraping Automation
+## Post-processing
 
 **File:** `Extraction.py`
 
